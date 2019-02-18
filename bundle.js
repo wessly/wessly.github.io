@@ -130,102 +130,132 @@ var App = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                null,
-                '1 \u0435\u0432\u0440\u043E = ',
-                this.state.eur.toFixed(2),
-                ' \u043B\u0432.',
-                _react2.default.createElement('br', null),
-                '1 \u0449\u0430\u0442\u0441\u043A\u0438 \u0434\u043E\u043B\u0430\u0440 = ',
-                this.state.usd.toFixed(2),
-                ' \u043B\u0432.',
-                _react2.default.createElement('br', null),
-                '1 \u0431\u0440\u0438\u0442\u0430\u043D\u0441\u043A\u0430 \u043B\u0438\u0440\u0430 = ',
-                this.state.gbp.toFixed(2),
-                ' \u043B\u0432.',
-                _react2.default.createElement('br', null),
-                '1 \u043D\u043E\u0432\u0430 \u0440\u0443\u043C\u044A\u043D\u0441\u043A\u0430 \u043B\u0435\u044F = ',
-                this.state.ron.toFixed(2),
-                ' \u043B\u0432.',
-                _react2.default.createElement('hr', null),
-                _react2.default.createElement('input', {
-                    type: 'number',
-                    name: 'value',
-                    onChange: this.handleChangeInput }),
+                { className: 'container' },
                 _react2.default.createElement(
-                    'select',
-                    {
-                        name: 'from',
-                        onChange: this.handleChangeInput },
+                    'div',
+                    { className: 'form-group' },
+                    _react2.default.createElement('br', null),
+                    '1 \u0435\u0432\u0440\u043E = ',
                     _react2.default.createElement(
-                        'option',
-                        { value: 'bgn' },
-                        'BGN'
+                        'a',
+                        { className: 'badge badge-success' },
+                        this.state.eur.toFixed(2),
+                        ' \u043B\u0432.'
+                    ),
+                    _react2.default.createElement('br', null),
+                    '1 \u0449\u0430\u0442\u0441\u043A\u0438 \u0434\u043E\u043B\u0430\u0440 = ',
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'badge badge-warning' },
+                        this.state.usd.toFixed(2),
+                        ' \u043B\u0432.'
+                    ),
+                    _react2.default.createElement('br', null),
+                    '1 \u0431\u0440\u0438\u0442\u0430\u043D\u0441\u043A\u0430 \u043B\u0438\u0440\u0430 = ',
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'badge badge-danger' },
+                        this.state.gbp.toFixed(2),
+                        ' \u043B\u0432.'
+                    ),
+                    _react2.default.createElement('br', null),
+                    '1 \u043D\u043E\u0432\u0430 \u0440\u0443\u043C\u044A\u043D\u0441\u043A\u0430 \u043B\u0435\u044F = ',
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'badge badge-info' },
+                        this.state.ron.toFixed(2),
+                        ' \u043B\u0432.'
+                    ),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement('input', {
+                        type: 'number',
+                        name: 'value',
+                        onChange: this.handleChangeInput,
+                        className: 'form-control' }),
+                    _react2.default.createElement(
+                        'select',
+                        {
+                            name: 'from',
+                            onChange: this.handleChangeInput,
+                            className: 'form-control' },
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'bgn' },
+                            'BGN'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'eur' },
+                            'EUR'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'usd' },
+                            'USD'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'gbp' },
+                            'GBP'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'ron' },
+                            'RON'
+                        )
                     ),
                     _react2.default.createElement(
-                        'option',
-                        { value: 'eur' },
-                        'EUR'
+                        'select',
+                        {
+                            name: 'to',
+                            onChange: this.handleChangeInput,
+                            className: 'form-control' },
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'bgn' },
+                            'BGN'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'eur' },
+                            'EUR'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'usd' },
+                            'USD'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'gbp' },
+                            'GBP'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'ron' },
+                            'RON'
+                        )
                     ),
+                    _react2.default.createElement('br', null),
                     _react2.default.createElement(
-                        'option',
-                        { value: 'usd' },
-                        'USD'
-                    ),
-                    _react2.default.createElement(
-                        'option',
-                        { value: 'gbp' },
-                        'GBP'
-                    ),
-                    _react2.default.createElement(
-                        'option',
-                        { value: 'ron' },
-                        'RON'
+                        'center',
+                        null,
+                        _react2.default.createElement(
+                            'button',
+                            {
+                                onClick: this.handleConvert,
+                                className: 'btn btn-primary' },
+                            '\u0418\u0437\u0447\u0438\u0441\u043B\u0438'
+                        ),
+                        _react2.default.createElement('br', null),
+                        _react2.default.createElement('br', null),
+                        _react2.default.createElement(
+                            'h1',
+                            null,
+                            this.state.final
+                        )
                     )
-                ),
-                '-->',
-                _react2.default.createElement(
-                    'select',
-                    {
-                        name: 'to',
-                        onChange: this.handleChangeInput },
-                    _react2.default.createElement(
-                        'option',
-                        { value: 'bgn' },
-                        'BGN'
-                    ),
-                    _react2.default.createElement(
-                        'option',
-                        { value: 'eur' },
-                        'EUR'
-                    ),
-                    _react2.default.createElement(
-                        'option',
-                        { value: 'usd' },
-                        'USD'
-                    ),
-                    _react2.default.createElement(
-                        'option',
-                        { value: 'gbp' },
-                        'GBP'
-                    ),
-                    _react2.default.createElement(
-                        'option',
-                        { value: 'ron' },
-                        'RON'
-                    )
-                ),
-                _react2.default.createElement(
-                    'button',
-                    {
-                        onClick: this.handleConvert
-                    },
-                    '\u0418\u0437\u0447\u0438\u0441\u043B\u0438'
-                ),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement(
-                    'h1',
-                    null,
-                    this.state.final
                 )
             );
         }

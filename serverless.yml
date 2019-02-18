@@ -1,0 +1,19 @@
+service: aws-nodejs
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+region: eu-central-1
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: currencies/all
+          method: get
+          cors: true
+
+plugins:
+  - serverless-offline
