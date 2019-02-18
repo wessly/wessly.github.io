@@ -223,123 +223,109 @@ var App = function (_React$Component) {
                     'div',
                     { className: 'form-group' },
                     _react2.default.createElement('br', null),
-                    '1 \u0435\u0432\u0440\u043E = ',
+                    '\u0435\u0432\u0440\u043E (EUR) - ',
                     _react2.default.createElement(
                         'a',
                         { className: 'badge badge-success' },
-                        this.state.eur.toFixed(2),
+                        this.state.eur.toFixed(4),
                         ' \u043B\u0432.'
                     ),
-                    _react2.default.createElement('br', null),
-                    '1 \u0449\u0430\u0442\u0441\u043A\u0438 \u0434\u043E\u043B\u0430\u0440 = ',
+                    ', \u0449\u0430\u0442\u0441\u043A\u0438 \u0434\u043E\u043B\u0430\u0440 (USD) - ',
                     _react2.default.createElement(
                         'a',
                         { className: 'badge badge-warning' },
-                        this.state.usd.toFixed(2),
+                        this.state.usd.toFixed(4),
                         ' \u043B\u0432.'
                     ),
-                    _react2.default.createElement('br', null),
-                    '1 \u0431\u0440\u0438\u0442\u0430\u043D\u0441\u043A\u0430 \u043B\u0438\u0440\u0430 = ',
+                    ', \u0431\u0440\u0438\u0442\u0430\u043D\u0441\u043A\u0430 \u043B\u0438\u0440\u0430 (GBP) - ',
                     _react2.default.createElement(
                         'a',
                         { className: 'badge badge-danger' },
-                        this.state.gbp.toFixed(2),
+                        this.state.gbp.toFixed(4),
                         ' \u043B\u0432.'
                     ),
-                    _react2.default.createElement('br', null),
-                    '1 \u043D\u043E\u0432\u0430 \u0440\u0443\u043C\u044A\u043D\u0441\u043A\u0430 \u043B\u0435\u044F = ',
+                    ', \u043D\u043E\u0432\u0430 \u0440\u0443\u043C\u044A\u043D\u0441\u043A\u0430 \u043B\u0435\u044F (RON) - ',
                     _react2.default.createElement(
                         'a',
                         { className: 'badge badge-info' },
-                        this.state.ron.toFixed(2),
+                        this.state.ron.toFixed(4),
                         ' \u043B\u0432.'
                     ),
-                    _react2.default.createElement('br', null),
-                    '1 \u043D\u043E\u0432\u0430 \u0442\u0443\u0440\u0441\u043A\u0430 \u043B\u0438\u0440\u0430 = ',
+                    ', \u043D\u043E\u0432\u0430 \u0442\u0443\u0440\u0441\u043A\u0430 \u043B\u0438\u0440\u0430 (TRY) - ',
                     _react2.default.createElement(
                         'a',
                         { className: 'badge badge-info' },
-                        this.state.try.toFixed(2),
+                        this.state.try.toFixed(4),
                         ' \u043B\u0432.'
                     ),
-                    _react2.default.createElement('br', null),
-                    '1 \u0448\u0432\u0435\u0439\u0446\u0430\u0440\u0441\u043A\u0438 \u0444\u0440\u0430\u043D\u043A = ',
+                    ', \u0448\u0432\u0435\u0439\u0446\u0430\u0440\u0441\u043A\u0438 \u0444\u0440\u0430\u043D\u043A (CHF) - ',
                     _react2.default.createElement(
                         'a',
                         { className: 'badge badge-info' },
-                        this.state.chf.toFixed(2),
+                        this.state.chf.toFixed(4),
                         ' \u043B\u0432.'
                     ),
-                    _react2.default.createElement('br', null),
-                    '1 \u0448\u0432\u0435\u0434\u0441\u043A\u0430 \u043A\u0440\u043E\u043D\u0430 = ',
+                    ', \u0448\u0432\u0435\u0434\u0441\u043A\u0430 \u043A\u0440\u043E\u043D\u0430 (SEK) - ',
                     _react2.default.createElement(
                         'a',
                         { className: 'badge badge-info' },
-                        this.state.sek.toFixed(2),
+                        this.state.sek.toFixed(4),
                         ' \u043B\u0432.'
                     ),
-                    _react2.default.createElement('br', null),
-                    '1 \u0434\u0430\u0442\u0441\u043A\u0430 \u043A\u0440\u043E\u043D\u0430 = ',
+                    ', \u0434\u0430\u0442\u0441\u043A\u0430 \u043A\u0440\u043E\u043D\u0430 (DKK) - ',
                     _react2.default.createElement(
                         'a',
                         { className: 'badge badge-info' },
-                        this.state.dkk.toFixed(2),
+                        this.state.dkk.toFixed(4),
                         ' \u043B\u0432.'
                     ),
-                    _react2.default.createElement('br', null),
-                    '1 \u043D\u043E\u0440\u0432\u0435\u0436\u043A\u0430 \u043A\u0440\u043E\u043D\u0430 = ',
+                    ', \u043D\u043E\u0440\u0432\u0435\u0436\u043A\u0430 \u043A\u0440\u043E\u043D\u0430 (NOK) - ',
                     _react2.default.createElement(
                         'a',
                         { className: 'badge badge-info' },
-                        this.state.nok.toFixed(2),
+                        this.state.nok.toFixed(4),
                         ' \u043B\u0432.'
                     ),
-                    _react2.default.createElement('br', null),
-                    '1 \u0440\u0443\u0441\u043A\u0430 \u0440\u0443\u0431\u043B\u0430 = ',
+                    ', \u0440\u0443\u0441\u043A\u0430 \u0440\u0443\u0431\u043B\u0430 (RUB) - ',
                     _react2.default.createElement(
                         'a',
                         { className: 'badge badge-info' },
-                        this.state.rub.toFixed(2),
+                        this.state.rub.toFixed(4),
                         ' \u043B\u0432.'
                     ),
-                    _react2.default.createElement('br', null),
-                    '1 \u043F\u043E\u043B\u0441\u043A\u0430 \u0437\u043B\u043E\u0442\u0430 = ',
+                    ', \u043F\u043E\u043B\u0441\u043A\u0430 \u0437\u043B\u043E\u0442\u0430 (PLN) - ',
                     _react2.default.createElement(
                         'a',
                         { className: 'badge badge-info' },
-                        this.state.pln.toFixed(2),
+                        this.state.pln.toFixed(4),
                         ' \u043B\u0432.'
                     ),
-                    _react2.default.createElement('br', null),
-                    '1 \u0443\u043D\u0433\u0430\u0440\u0441\u043A\u0438 \u0444\u043E\u0440\u0438\u043D\u0442 = ',
+                    ', \u0443\u043D\u0433\u0430\u0440\u0441\u043A\u0438 \u0444\u043E\u0440\u0438\u043D\u0442 (HUF) - ',
                     _react2.default.createElement(
                         'a',
                         { className: 'badge badge-info' },
-                        this.state.huf.toFixed(2),
+                        this.state.huf.toFixed(4),
                         ' \u043B\u0432.'
                     ),
-                    _react2.default.createElement('br', null),
-                    '1 \u044F\u043F\u043E\u043D\u0441\u043A\u0430 \u0439\u0435\u043D\u0430 = ',
+                    ', \u044F\u043F\u043E\u043D\u0441\u043A\u0430 \u0439\u0435\u043D\u0430 (JPY) - ',
                     _react2.default.createElement(
                         'a',
                         { className: 'badge badge-info' },
-                        this.state.jpy.toFixed(2),
+                        this.state.jpy.toFixed(4),
                         ' \u043B\u0432.'
                     ),
-                    _react2.default.createElement('br', null),
-                    '1 \u0430\u0432\u0441\u0442\u0440\u0430\u043B\u0438\u0439\u0441\u043A\u0438 \u0434\u043E\u043B\u0430\u0440 = ',
+                    ', \u0430\u0432\u0441\u0442\u0440\u0430\u043B\u0438\u0439\u0441\u043A\u0438 \u0434\u043E\u043B\u0430\u0440 (AUD) - ',
                     _react2.default.createElement(
                         'a',
                         { className: 'badge badge-info' },
-                        this.state.aud.toFixed(2),
+                        this.state.aud.toFixed(4),
                         ' \u043B\u0432.'
                     ),
-                    _react2.default.createElement('br', null),
-                    '1 \u043A\u0430\u043D\u0430\u0434\u0441\u043A\u0438 \u0434\u043E\u043B\u0430\u0440 = ',
+                    ', \u043A\u0430\u043D\u0430\u0434\u0441\u043A\u0438 \u0434\u043E\u043B\u0430\u0440 (CAD) - ',
                     _react2.default.createElement(
                         'a',
                         { className: 'badge badge-info' },
-                        this.state.cad.toFixed(2),
+                        this.state.cad.toFixed(4),
                         ' \u043B\u0432.'
                     ),
                     _react2.default.createElement('br', null),
@@ -528,18 +514,21 @@ var App = function (_React$Component) {
                         'center',
                         null,
                         _react2.default.createElement(
-                            'button',
-                            {
-                                onClick: this.handleConvert,
-                                className: 'btn btn-primary' },
-                            '\u0418\u0437\u0447\u0438\u0441\u043B\u0438'
-                        ),
-                        _react2.default.createElement('br', null),
-                        _react2.default.createElement('br', null),
-                        _react2.default.createElement(
-                            'h1',
-                            null,
-                            this.state.final
+                            'div',
+                            { 'class': 'btn-group', role: 'group', 'aria-label': '' },
+                            _react2.default.createElement(
+                                'button',
+                                {
+                                    onClick: this.handleConvert,
+                                    className: 'btn btn-primary' },
+                                '\u0418\u0437\u0447\u0438\u0441\u043B\u0438'
+                            ),
+                            _react2.default.createElement(
+                                'button',
+                                {
+                                    className: 'btn btn-info' },
+                                this.state.final
+                            )
                         )
                     )
                 )

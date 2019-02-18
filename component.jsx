@@ -192,35 +192,21 @@ class App extends React.Component {
             <div className="container">
                 <div className="form-group">
                     <br />
-                    1 евро = <a className="badge badge-success">{this.state.eur.toFixed(2)} лв.</a>
-                    <br />
-                    1 щатски долар = <a className="badge badge-warning">{this.state.usd.toFixed(2)} лв.</a>
-                    <br />
-                    1 британска лира = <a className="badge badge-danger">{this.state.gbp.toFixed(2)} лв.</a>
-                    <br />
-                    1 нова румънска лея = <a className="badge badge-info">{this.state.ron.toFixed(2)} лв.</a>
-                    <br />
-                    1 нова турска лира = <a className="badge badge-info">{this.state.try.toFixed(2)} лв.</a>
-                    <br />
-                    1 швейцарски франк = <a className="badge badge-info">{this.state.chf.toFixed(2)} лв.</a>
-                    <br />
-                    1 шведска крона = <a className="badge badge-info">{this.state.sek.toFixed(2)} лв.</a>
-                    <br />
-                    1 датска крона = <a className="badge badge-info">{this.state.dkk.toFixed(2)} лв.</a>
-                    <br />
-                    1 норвежка крона = <a className="badge badge-info">{this.state.nok.toFixed(2)} лв.</a>
-                    <br />
-                    1 руска рубла = <a className="badge badge-info">{this.state.rub.toFixed(2)} лв.</a>
-                    <br />
-                    1 полска злота = <a className="badge badge-info">{this.state.pln.toFixed(2)} лв.</a>
-                    <br />
-                    1 унгарски форинт = <a className="badge badge-info">{this.state.huf.toFixed(2)} лв.</a>
-                    <br />
-                    1 японска йена = <a className="badge badge-info">{this.state.jpy.toFixed(2)} лв.</a>
-                    <br />
-                    1 австралийски долар = <a className="badge badge-info">{this.state.aud.toFixed(2)} лв.</a>
-                    <br />
-                    1 канадски долар = <a className="badge badge-info">{this.state.cad.toFixed(2)} лв.</a>
+                    евро (EUR) - <a className="badge badge-success">{this.state.eur.toFixed(4)} лв.</a>, 
+                    щатски долар (USD) - <a className="badge badge-warning">{this.state.usd.toFixed(4)} лв.</a>, 
+                    британска лира (GBP) - <a className="badge badge-danger">{this.state.gbp.toFixed(4)} лв.</a>, 
+                    нова румънска лея (RON) - <a className="badge badge-info">{this.state.ron.toFixed(4)} лв.</a>, 
+                    нова турска лира (TRY) - <a className="badge badge-info">{this.state.try.toFixed(4)} лв.</a>, 
+                    швейцарски франк (CHF) - <a className="badge badge-info">{this.state.chf.toFixed(4)} лв.</a>, 
+                    шведска крона (SEK) - <a className="badge badge-info">{this.state.sek.toFixed(4)} лв.</a>,
+                    датска крона (DKK) - <a className="badge badge-info">{this.state.dkk.toFixed(4)} лв.</a>, 
+                    норвежка крона (NOK) - <a className="badge badge-info">{this.state.nok.toFixed(4)} лв.</a>, 
+                    руска рубла (RUB) - <a className="badge badge-info">{this.state.rub.toFixed(4)} лв.</a>, 
+                    полска злота (PLN) - <a className="badge badge-info">{this.state.pln.toFixed(4)} лв.</a>, 
+                    унгарски форинт (HUF) - <a className="badge badge-info">{this.state.huf.toFixed(4)} лв.</a>, 
+                    японска йена (JPY) - <a className="badge badge-info">{this.state.jpy.toFixed(4)} лв.</a>, 
+                    австралийски долар (AUD) - <a className="badge badge-info">{this.state.aud.toFixed(4)} лв.</a>, 
+                    канадски долар (CAD) - <a className="badge badge-info">{this.state.cad.toFixed(4)} лв.</a>
                     <br />
                     <br />
                     <input
@@ -272,14 +258,17 @@ class App extends React.Component {
                     </select>
                     <br />
                     <center>
-                        <button
-                            onClick={this.handleConvert}
-                            className="btn btn-primary">
-                            Изчисли
-                        </button>
-                        <br />
-                        <br />
-                        <h1>{this.state.final}</h1>
+                        <div class="btn-group" role="group" aria-label="">
+                            <button
+                                onClick={this.handleConvert}
+                                className="btn btn-primary">
+                                Изчисли
+                            </button>
+                            <button
+                                className="btn btn-info">
+                                {this.state.final}
+                            </button>
+                        </div>
                     </center>
                 </div>
             </div>
