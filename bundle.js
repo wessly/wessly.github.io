@@ -35,6 +35,7 @@ var App = function (_React$Component) {
             usd: 0,
             gbp: 0,
             ron: 0,
+            try: 0,
             value: 0,
             final: 0,
             from: '',
@@ -63,7 +64,8 @@ var App = function (_React$Component) {
                 _this2.setState({
                     usd: Number(jsondata[0][29]["Лева (BGN)"]),
                     gbp: Number(jsondata[0][7]["Лева (BGN)"]),
-                    ron: Number(jsondata[0][23]["Лева (BGN)"])
+                    ron: Number(jsondata[0][23]["Лева (BGN)"]),
+                    try: Number(jsondata[0][28]["Лева (BGN)"])
                 });
             });
         }
@@ -95,6 +97,9 @@ var App = function (_React$Component) {
                 case 'ron':
                     c1 = this.state.ron;
                     break;
+                case 'try':
+                    c1 = this.state.try;
+                    break;
                 default:
                     c1 = 1;
                     break;
@@ -115,6 +120,9 @@ var App = function (_React$Component) {
                     break;
                 case 'ron':
                     c2 = this.state.ron;
+                    break;
+                case 'try':
+                    c1 = this.state.try;
                     break;
                 default:
                     c2 = 1;
@@ -167,6 +175,14 @@ var App = function (_React$Component) {
                         ' \u043B\u0432.'
                     ),
                     _react2.default.createElement('br', null),
+                    '1 \u043D\u043E\u0432\u0430 \u0442\u0443\u0440\u0441\u043A\u0430 \u043B\u0438\u0440\u0430 = ',
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'badge badge-info' },
+                        this.state.try.toFixed(2),
+                        ' \u043B\u0432.'
+                    ),
+                    _react2.default.createElement('br', null),
                     _react2.default.createElement('br', null),
                     _react2.default.createElement('input', {
                         type: 'number',
@@ -203,6 +219,11 @@ var App = function (_React$Component) {
                             'option',
                             { value: 'ron' },
                             'RON'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'try' },
+                            'TRY'
                         )
                     ),
                     _react2.default.createElement(
@@ -235,6 +256,11 @@ var App = function (_React$Component) {
                             'option',
                             { value: 'ron' },
                             'RON'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'try' },
+                            'TRY'
                         )
                     ),
                     _react2.default.createElement('br', null),
