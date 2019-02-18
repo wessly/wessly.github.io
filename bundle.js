@@ -36,6 +36,16 @@ var App = function (_React$Component) {
             gbp: 0,
             ron: 0,
             try: 0,
+            chf: 0,
+            sek: 0,
+            dkk: 0,
+            nok: 0,
+            rub: 0,
+            pln: 0,
+            huf: 0,
+            jpy: 0,
+            aud: 0,
+            cad: 0,
             value: 0,
             final: 0,
             from: '',
@@ -65,7 +75,17 @@ var App = function (_React$Component) {
                     usd: Number(jsondata[0][29]["Лева (BGN)"]),
                     gbp: Number(jsondata[0][7]["Лева (BGN)"]),
                     ron: Number(jsondata[0][23]["Лева (BGN)"]),
-                    try: Number(jsondata[0][28]["Лева (BGN)"])
+                    try: Number(jsondata[0][28]["Лева (BGN)"]),
+                    chf: Number(jsondata[0][3]["Лева (BGN)"]),
+                    sek: Number(jsondata[0][25]["Лева (BGN)"]),
+                    dkk: Number(jsondata[0][6]["Лева (BGN)"]),
+                    nok: Number(jsondata[0][19]["Лева (BGN)"]),
+                    rub: Number(jsondata[0][24]["Лева (BGN)"]),
+                    pln: Number(jsondata[0][22]["Лева (BGN)"]),
+                    huf: Number(jsondata[0][10]["Лева (BGN)"]),
+                    jpy: Number(jsondata[0][15]["Лева (BGN)"]),
+                    aud: Number(jsondata[0][0]["Лева (BGN)"]),
+                    cad: Number(jsondata[0][2]["Лева (BGN)"])
                 });
             });
         }
@@ -100,6 +120,36 @@ var App = function (_React$Component) {
                 case 'try':
                     c1 = this.state.try;
                     break;
+                case 'chf':
+                    c1 = this.state.chf;
+                    break;
+                case 'sek':
+                    c1 = this.state.sek;
+                    break;
+                case 'dkk':
+                    c1 = this.state.dkk;
+                    break;
+                case 'nok':
+                    c1 = this.state.nok;
+                    break;
+                case 'rub':
+                    c1 = this.state.rub;
+                    break;
+                case 'pln':
+                    c1 = this.state.pln;
+                    break;
+                case 'huf':
+                    c1 = this.state.huf;
+                    break;
+                case 'jpy':
+                    c1 = this.state.jpy;
+                    break;
+                case 'aud':
+                    c1 = this.state.aud;
+                    break;
+                case 'cad':
+                    c1 = this.state.cad;
+                    break;
                 default:
                     c1 = 1;
                     break;
@@ -122,7 +172,37 @@ var App = function (_React$Component) {
                     c2 = this.state.ron;
                     break;
                 case 'try':
-                    c1 = this.state.try;
+                    c2 = this.state.try;
+                    break;
+                case 'chf':
+                    c2 = this.state.chf;
+                    break;
+                case 'sek':
+                    c2 = this.state.sek;
+                    break;
+                case 'dkk':
+                    c2 = this.state.dkk;
+                    break;
+                case 'nok':
+                    c2 = this.state.nok;
+                    break;
+                case 'rub':
+                    c2 = this.state.rub;
+                    break;
+                case 'pln':
+                    c2 = this.state.pln;
+                    break;
+                case 'huf':
+                    c2 = this.state.huf;
+                    break;
+                case 'jpy':
+                    c2 = this.state.jpy;
+                    break;
+                case 'aud':
+                    c2 = this.state.aud;
+                    break;
+                case 'cad':
+                    c2 = this.state.cad;
                     break;
                 default:
                     c2 = 1;
@@ -183,6 +263,86 @@ var App = function (_React$Component) {
                         ' \u043B\u0432.'
                     ),
                     _react2.default.createElement('br', null),
+                    '1 \u0448\u0432\u0435\u0439\u0446\u0430\u0440\u0441\u043A\u0438 \u0444\u0440\u0430\u043D\u043A = ',
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'badge badge-info' },
+                        this.state.chf.toFixed(2),
+                        ' \u043B\u0432.'
+                    ),
+                    _react2.default.createElement('br', null),
+                    '1 \u0448\u0432\u0435\u0434\u0441\u043A\u0430 \u043A\u0440\u043E\u043D\u0430 = ',
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'badge badge-info' },
+                        this.state.sek.toFixed(2),
+                        ' \u043B\u0432.'
+                    ),
+                    _react2.default.createElement('br', null),
+                    '1 \u0434\u0430\u0442\u0441\u043A\u0430 \u043A\u0440\u043E\u043D\u0430 = ',
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'badge badge-info' },
+                        this.state.dkk.toFixed(2),
+                        ' \u043B\u0432.'
+                    ),
+                    _react2.default.createElement('br', null),
+                    '1 \u043D\u043E\u0440\u0432\u0435\u0436\u043A\u0430 \u043A\u0440\u043E\u043D\u0430 = ',
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'badge badge-info' },
+                        this.state.nok.toFixed(2),
+                        ' \u043B\u0432.'
+                    ),
+                    _react2.default.createElement('br', null),
+                    '1 \u0440\u0443\u0441\u043A\u0430 \u0440\u0443\u0431\u043B\u0430 = ',
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'badge badge-info' },
+                        this.state.rub.toFixed(2),
+                        ' \u043B\u0432.'
+                    ),
+                    _react2.default.createElement('br', null),
+                    '1 \u043F\u043E\u043B\u0441\u043A\u0430 \u0437\u043B\u043E\u0442\u0430 = ',
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'badge badge-info' },
+                        this.state.pln.toFixed(2),
+                        ' \u043B\u0432.'
+                    ),
+                    _react2.default.createElement('br', null),
+                    '1 \u0443\u043D\u0433\u0430\u0440\u0441\u043A\u0438 \u0444\u043E\u0440\u0438\u043D\u0442 = ',
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'badge badge-info' },
+                        this.state.huf.toFixed(2),
+                        ' \u043B\u0432.'
+                    ),
+                    _react2.default.createElement('br', null),
+                    '1 \u044F\u043F\u043E\u043D\u0441\u043A\u0430 \u0439\u0435\u043D\u0430 = ',
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'badge badge-info' },
+                        this.state.jpy.toFixed(2),
+                        ' \u043B\u0432.'
+                    ),
+                    _react2.default.createElement('br', null),
+                    '1 \u0430\u0432\u0441\u0442\u0440\u0430\u043B\u0438\u0439\u0441\u043A\u0438 \u0434\u043E\u043B\u0430\u0440 = ',
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'badge badge-info' },
+                        this.state.aud.toFixed(2),
+                        ' \u043B\u0432.'
+                    ),
+                    _react2.default.createElement('br', null),
+                    '1 \u043A\u0430\u043D\u0430\u0434\u0441\u043A\u0438 \u0434\u043E\u043B\u0430\u0440 = ',
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'badge badge-info' },
+                        this.state.cad.toFixed(2),
+                        ' \u043B\u0432.'
+                    ),
+                    _react2.default.createElement('br', null),
                     _react2.default.createElement('br', null),
                     _react2.default.createElement('input', {
                         type: 'number',
@@ -224,6 +384,56 @@ var App = function (_React$Component) {
                             'option',
                             { value: 'try' },
                             'TRY'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'chf' },
+                            'CHF'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'sek' },
+                            'SEK'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'dkk' },
+                            'DKK'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'nok' },
+                            'NOK'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'rub' },
+                            'RUB'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'pln' },
+                            'PLN'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'huf' },
+                            'HUF'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'jpy' },
+                            'JPY'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'aud' },
+                            'AUD'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'cad' },
+                            'CAD'
                         )
                     ),
                     _react2.default.createElement(
@@ -261,6 +471,56 @@ var App = function (_React$Component) {
                             'option',
                             { value: 'try' },
                             'TRY'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'chf' },
+                            'CHF'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'sek' },
+                            'SEK'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'dkk' },
+                            'DKK'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'nok' },
+                            'NOK'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'rub' },
+                            'RUB'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'pln' },
+                            'PLN'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'huf' },
+                            'HUF'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'jpy' },
+                            'JPY'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'aud' },
+                            'AUD'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'cad' },
+                            'CAD'
                         )
                     ),
                     _react2.default.createElement('br', null),
