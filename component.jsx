@@ -192,70 +192,72 @@ class App extends React.Component {
             <div className="container">
                 <div className="form-group">
                     <br />
-                    евро (EUR) - <a className="badge badge-success">{this.state.eur.toFixed(4)} лв.</a>, 
-                    щатски долар (USD) - <a className="badge badge-warning">{this.state.usd.toFixed(4)} лв.</a>, 
-                    британска лира (GBP) - <a className="badge badge-danger">{this.state.gbp.toFixed(4)} лв.</a>, 
-                    нова румънска лея (RON) - <a className="badge badge-info">{this.state.ron.toFixed(4)} лв.</a>, 
-                    нова турска лира (TRY) - <a className="badge badge-info">{this.state.try.toFixed(4)} лв.</a>, 
-                    швейцарски франк (CHF) - <a className="badge badge-info">{this.state.chf.toFixed(4)} лв.</a>, 
-                    шведска крона (SEK) - <a className="badge badge-info">{this.state.sek.toFixed(4)} лв.</a>,
-                    датска крона (DKK) - <a className="badge badge-info">{this.state.dkk.toFixed(4)} лв.</a>, 
-                    норвежка крона (NOK) - <a className="badge badge-info">{this.state.nok.toFixed(4)} лв.</a>, 
-                    руска рубла (RUB) - <a className="badge badge-info">{this.state.rub.toFixed(4)} лв.</a>, 
-                    полска злота (PLN) - <a className="badge badge-info">{this.state.pln.toFixed(4)} лв.</a>, 
-                    унгарски форинт (HUF) - <a className="badge badge-info">{this.state.huf.toFixed(4)} лв.</a>, 
-                    японска йена (JPY) - <a className="badge badge-info">{this.state.jpy.toFixed(4)} лв.</a>, 
-                    австралийски долар (AUD) - <a className="badge badge-info">{this.state.aud.toFixed(4)} лв.</a>, 
-                    канадски долар (CAD) - <a className="badge badge-info">{this.state.cad.toFixed(4)} лв.</a>
+                    евро (EUR) - <a className="badge badge-success" style="color: white !important;">{this.state.eur.toFixed(4)} лв.</a>, 
+                    щатски долар (USD) - <a className="badge badge-success" style="color: white !important;">{this.state.usd.toFixed(4)} лв.</a>, 
+                    британска лира (GBP) - <a className="badge badge-success" style="color: white !important;">{this.state.gbp.toFixed(4)} лв.</a>, 
+                    нова румънска лея (RON) - <a className="badge badge-success" style="color: white !important;">{this.state.ron.toFixed(4)} лв.</a>, 
+                    нова турска лира (TRY) - <a className="badge badge-success" style="color: white !important;">{this.state.try.toFixed(4)} лв.</a>, 
+                    швейцарски франк (CHF) - <a className="badge badge-success" style="color: white !important;">{this.state.chf.toFixed(4)} лв.</a>, 
+                    шведска крона (SEK) - <a className="badge badge-success" style="color: white !important;">{this.state.sek.toFixed(4)} лв.</a>,
+                    датска крона (DKK) - <a className="badge badge-success" style="color: white !important;">{this.state.dkk.toFixed(4)} лв.</a>, 
+                    норвежка крона (NOK) - <a className="badge badge-success" style="color: white !important;">{this.state.nok.toFixed(4)} лв.</a>, 
+                    руска рубла (RUB) - <a className="badge badge-success" style="color: white !important;">{this.state.rub.toFixed(4)} лв.</a>, 
+                    полска злота (PLN) - <a className="badge badge-success" style="color: white !important;">{this.state.pln.toFixed(4)} лв.</a>, 
+                    унгарски форинт (HUF) - <a className="badge badge-success" style="color: white !important;">{this.state.huf.toFixed(4)} лв.</a>, 
+                    японска йена (JPY) - <a className="badge badge-success" style="color: white !important;">{this.state.jpy.toFixed(4)} лв.</a>, 
+                    австралийски долар (AUD) - <a className="badge badge-success" style="color: white !important;">{this.state.aud.toFixed(4)} лв.</a>, 
+                    канадски долар (CAD) - <a className="badge badge-success" style="color: white !important;">{this.state.cad.toFixed(4)} лв.</a>
                     <br />
                     <br />
-                    <input
-                        type="number"
-                        name="value"
-                        onChange={this.handleChangeInput}
-                        className="form-control" />
-                    <select
-                        name="from"
-                        onChange={this.handleChangeInput}
-                        className="form-control">
-                        <option value="bgn">BGN</option>
-                        <option value="eur">EUR</option>
-                        <option value="usd">USD</option>
-                        <option value="gbp">GBP</option>
-                        <option value="ron">RON</option>
-                        <option value="try">TRY</option>
-                        <option value="chf">CHF</option>
-                        <option value="sek">SEK</option>
-                        <option value="dkk">DKK</option>
-                        <option value="nok">NOK</option>
-                        <option value="rub">RUB</option>
-                        <option value="pln">PLN</option>
-                        <option value="huf">HUF</option>
-                        <option value="jpy">JPY</option>
-                        <option value="aud">AUD</option>
-                        <option value="cad">CAD</option>
-                    </select>
-                    <select
-                        name="to"
-                        onChange={this.handleChangeInput}
-                        className="form-control">
-                        <option value="bgn">BGN</option>
-                        <option value="eur">EUR</option>
-                        <option value="usd">USD</option>
-                        <option value="gbp">GBP</option>
-                        <option value="ron">RON</option>
-                        <option value="try">TRY</option>
-                        <option value="chf">CHF</option>
-                        <option value="sek">SEK</option>
-                        <option value="dkk">DKK</option>
-                        <option value="nok">NOK</option>
-                        <option value="rub">RUB</option>
-                        <option value="pln">PLN</option>
-                        <option value="huf">HUF</option>
-                        <option value="jpy">JPY</option>
-                        <option value="aud">AUD</option>
-                        <option value="cad">CAD</option>
-                    </select>
+                    <div class="input-group">
+                        <input
+                            type="number"
+                            name="value"
+                            onChange={this.handleChangeInput}
+                            className="form-control" />
+                        <select
+                            name="from"
+                            onChange={this.handleChangeInput}
+                            className="form-control">
+                            <option value="bgn">BGN</option>
+                            <option value="eur">EUR</option>
+                            <option value="usd">USD</option>
+                            <option value="gbp">GBP</option>
+                            <option value="ron">RON</option>
+                            <option value="try">TRY</option>
+                            <option value="chf">CHF</option>
+                            <option value="sek">SEK</option>
+                            <option value="dkk">DKK</option>
+                            <option value="nok">NOK</option>
+                            <option value="rub">RUB</option>
+                            <option value="pln">PLN</option>
+                            <option value="huf">HUF</option>
+                            <option value="jpy">JPY</option>
+                            <option value="aud">AUD</option>
+                            <option value="cad">CAD</option>
+                        </select>
+                        <select
+                            name="to"
+                            onChange={this.handleChangeInput}
+                            className="form-control">
+                            <option value="bgn">BGN</option>
+                            <option value="eur">EUR</option>
+                            <option value="usd">USD</option>
+                            <option value="gbp">GBP</option>
+                            <option value="ron">RON</option>
+                            <option value="try">TRY</option>
+                            <option value="chf">CHF</option>
+                            <option value="sek">SEK</option>
+                            <option value="dkk">DKK</option>
+                            <option value="nok">NOK</option>
+                            <option value="rub">RUB</option>
+                            <option value="pln">PLN</option>
+                            <option value="huf">HUF</option>
+                            <option value="jpy">JPY</option>
+                            <option value="aud">AUD</option>
+                            <option value="cad">CAD</option>
+                        </select>
+                    </div>
                     <br />
                     <center>
                         <div class="btn-group" role="group" aria-label="">

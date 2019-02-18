@@ -226,287 +226,291 @@ var App = function (_React$Component) {
                     '\u0435\u0432\u0440\u043E (EUR) - ',
                     _react2.default.createElement(
                         'a',
-                        { className: 'badge badge-success' },
+                        { className: 'badge badge-success', style: 'color: white !important;' },
                         this.state.eur.toFixed(4),
                         ' \u043B\u0432.'
                     ),
                     ', \u0449\u0430\u0442\u0441\u043A\u0438 \u0434\u043E\u043B\u0430\u0440 (USD) - ',
                     _react2.default.createElement(
                         'a',
-                        { className: 'badge badge-warning' },
+                        { className: 'badge badge-success', style: 'color: white !important;' },
                         this.state.usd.toFixed(4),
                         ' \u043B\u0432.'
                     ),
                     ', \u0431\u0440\u0438\u0442\u0430\u043D\u0441\u043A\u0430 \u043B\u0438\u0440\u0430 (GBP) - ',
                     _react2.default.createElement(
                         'a',
-                        { className: 'badge badge-danger' },
+                        { className: 'badge badge-success', style: 'color: white !important;' },
                         this.state.gbp.toFixed(4),
                         ' \u043B\u0432.'
                     ),
                     ', \u043D\u043E\u0432\u0430 \u0440\u0443\u043C\u044A\u043D\u0441\u043A\u0430 \u043B\u0435\u044F (RON) - ',
                     _react2.default.createElement(
                         'a',
-                        { className: 'badge badge-info' },
+                        { className: 'badge badge-success', style: 'color: white !important;' },
                         this.state.ron.toFixed(4),
                         ' \u043B\u0432.'
                     ),
                     ', \u043D\u043E\u0432\u0430 \u0442\u0443\u0440\u0441\u043A\u0430 \u043B\u0438\u0440\u0430 (TRY) - ',
                     _react2.default.createElement(
                         'a',
-                        { className: 'badge badge-info' },
+                        { className: 'badge badge-success', style: 'color: white !important;' },
                         this.state.try.toFixed(4),
                         ' \u043B\u0432.'
                     ),
                     ', \u0448\u0432\u0435\u0439\u0446\u0430\u0440\u0441\u043A\u0438 \u0444\u0440\u0430\u043D\u043A (CHF) - ',
                     _react2.default.createElement(
                         'a',
-                        { className: 'badge badge-info' },
+                        { className: 'badge badge-success', style: 'color: white !important;' },
                         this.state.chf.toFixed(4),
                         ' \u043B\u0432.'
                     ),
                     ', \u0448\u0432\u0435\u0434\u0441\u043A\u0430 \u043A\u0440\u043E\u043D\u0430 (SEK) - ',
                     _react2.default.createElement(
                         'a',
-                        { className: 'badge badge-info' },
+                        { className: 'badge badge-success', style: 'color: white !important;' },
                         this.state.sek.toFixed(4),
                         ' \u043B\u0432.'
                     ),
                     ', \u0434\u0430\u0442\u0441\u043A\u0430 \u043A\u0440\u043E\u043D\u0430 (DKK) - ',
                     _react2.default.createElement(
                         'a',
-                        { className: 'badge badge-info' },
+                        { className: 'badge badge-success', style: 'color: white !important;' },
                         this.state.dkk.toFixed(4),
                         ' \u043B\u0432.'
                     ),
                     ', \u043D\u043E\u0440\u0432\u0435\u0436\u043A\u0430 \u043A\u0440\u043E\u043D\u0430 (NOK) - ',
                     _react2.default.createElement(
                         'a',
-                        { className: 'badge badge-info' },
+                        { className: 'badge badge-success', style: 'color: white !important;' },
                         this.state.nok.toFixed(4),
                         ' \u043B\u0432.'
                     ),
                     ', \u0440\u0443\u0441\u043A\u0430 \u0440\u0443\u0431\u043B\u0430 (RUB) - ',
                     _react2.default.createElement(
                         'a',
-                        { className: 'badge badge-info' },
+                        { className: 'badge badge-success', style: 'color: white !important;' },
                         this.state.rub.toFixed(4),
                         ' \u043B\u0432.'
                     ),
                     ', \u043F\u043E\u043B\u0441\u043A\u0430 \u0437\u043B\u043E\u0442\u0430 (PLN) - ',
                     _react2.default.createElement(
                         'a',
-                        { className: 'badge badge-info' },
+                        { className: 'badge badge-success', style: 'color: white !important;' },
                         this.state.pln.toFixed(4),
                         ' \u043B\u0432.'
                     ),
                     ', \u0443\u043D\u0433\u0430\u0440\u0441\u043A\u0438 \u0444\u043E\u0440\u0438\u043D\u0442 (HUF) - ',
                     _react2.default.createElement(
                         'a',
-                        { className: 'badge badge-info' },
+                        { className: 'badge badge-success', style: 'color: white !important;' },
                         this.state.huf.toFixed(4),
                         ' \u043B\u0432.'
                     ),
                     ', \u044F\u043F\u043E\u043D\u0441\u043A\u0430 \u0439\u0435\u043D\u0430 (JPY) - ',
                     _react2.default.createElement(
                         'a',
-                        { className: 'badge badge-info' },
+                        { className: 'badge badge-success', style: 'color: white !important;' },
                         this.state.jpy.toFixed(4),
                         ' \u043B\u0432.'
                     ),
                     ', \u0430\u0432\u0441\u0442\u0440\u0430\u043B\u0438\u0439\u0441\u043A\u0438 \u0434\u043E\u043B\u0430\u0440 (AUD) - ',
                     _react2.default.createElement(
                         'a',
-                        { className: 'badge badge-info' },
+                        { className: 'badge badge-success', style: 'color: white !important;' },
                         this.state.aud.toFixed(4),
                         ' \u043B\u0432.'
                     ),
                     ', \u043A\u0430\u043D\u0430\u0434\u0441\u043A\u0438 \u0434\u043E\u043B\u0430\u0440 (CAD) - ',
                     _react2.default.createElement(
                         'a',
-                        { className: 'badge badge-info' },
+                        { className: 'badge badge-success', style: 'color: white !important;' },
                         this.state.cad.toFixed(4),
                         ' \u043B\u0432.'
                     ),
                     _react2.default.createElement('br', null),
                     _react2.default.createElement('br', null),
-                    _react2.default.createElement('input', {
-                        type: 'number',
-                        name: 'value',
-                        onChange: this.handleChangeInput,
-                        className: 'form-control' }),
                     _react2.default.createElement(
-                        'select',
-                        {
-                            name: 'from',
+                        'div',
+                        { 'class': 'input-group' },
+                        _react2.default.createElement('input', {
+                            type: 'number',
+                            name: 'value',
                             onChange: this.handleChangeInput,
-                            className: 'form-control' },
+                            className: 'form-control' }),
                         _react2.default.createElement(
-                            'option',
-                            { value: 'bgn' },
-                            'BGN'
+                            'select',
+                            {
+                                name: 'from',
+                                onChange: this.handleChangeInput,
+                                className: 'form-control' },
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'bgn' },
+                                'BGN'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'eur' },
+                                'EUR'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'usd' },
+                                'USD'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'gbp' },
+                                'GBP'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'ron' },
+                                'RON'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'try' },
+                                'TRY'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'chf' },
+                                'CHF'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'sek' },
+                                'SEK'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'dkk' },
+                                'DKK'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'nok' },
+                                'NOK'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'rub' },
+                                'RUB'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'pln' },
+                                'PLN'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'huf' },
+                                'HUF'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'jpy' },
+                                'JPY'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'aud' },
+                                'AUD'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'cad' },
+                                'CAD'
+                            )
                         ),
                         _react2.default.createElement(
-                            'option',
-                            { value: 'eur' },
-                            'EUR'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'usd' },
-                            'USD'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'gbp' },
-                            'GBP'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'ron' },
-                            'RON'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'try' },
-                            'TRY'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'chf' },
-                            'CHF'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'sek' },
-                            'SEK'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'dkk' },
-                            'DKK'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'nok' },
-                            'NOK'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'rub' },
-                            'RUB'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'pln' },
-                            'PLN'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'huf' },
-                            'HUF'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'jpy' },
-                            'JPY'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'aud' },
-                            'AUD'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'cad' },
-                            'CAD'
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'select',
-                        {
-                            name: 'to',
-                            onChange: this.handleChangeInput,
-                            className: 'form-control' },
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'bgn' },
-                            'BGN'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'eur' },
-                            'EUR'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'usd' },
-                            'USD'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'gbp' },
-                            'GBP'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'ron' },
-                            'RON'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'try' },
-                            'TRY'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'chf' },
-                            'CHF'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'sek' },
-                            'SEK'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'dkk' },
-                            'DKK'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'nok' },
-                            'NOK'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'rub' },
-                            'RUB'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'pln' },
-                            'PLN'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'huf' },
-                            'HUF'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'jpy' },
-                            'JPY'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'aud' },
-                            'AUD'
-                        ),
-                        _react2.default.createElement(
-                            'option',
-                            { value: 'cad' },
-                            'CAD'
+                            'select',
+                            {
+                                name: 'to',
+                                onChange: this.handleChangeInput,
+                                className: 'form-control' },
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'bgn' },
+                                'BGN'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'eur' },
+                                'EUR'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'usd' },
+                                'USD'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'gbp' },
+                                'GBP'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'ron' },
+                                'RON'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'try' },
+                                'TRY'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'chf' },
+                                'CHF'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'sek' },
+                                'SEK'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'dkk' },
+                                'DKK'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'nok' },
+                                'NOK'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'rub' },
+                                'RUB'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'pln' },
+                                'PLN'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'huf' },
+                                'HUF'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'jpy' },
+                                'JPY'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'aud' },
+                                'AUD'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: 'cad' },
+                                'CAD'
+                            )
                         )
                     ),
                     _react2.default.createElement('br', null),
