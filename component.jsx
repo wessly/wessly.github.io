@@ -192,24 +192,24 @@ class App extends React.Component {
             <div className="container">
                 <div className="form-group">
                     <br />
-                    евро (EUR) - <a className="badge badge-success" style="color: white !important;">{this.state.eur.toFixed(4)} лв.</a>, 
-                    щатски долар (USD) - <a className="badge badge-success" style="color: white !important;">{this.state.usd.toFixed(4)} лв.</a>, 
-                    британска лира (GBP) - <a className="badge badge-success" style="color: white !important;">{this.state.gbp.toFixed(4)} лв.</a>, 
-                    нова румънска лея (RON) - <a className="badge badge-success" style="color: white !important;">{this.state.ron.toFixed(4)} лв.</a>, 
-                    нова турска лира (TRY) - <a className="badge badge-success" style="color: white !important;">{this.state.try.toFixed(4)} лв.</a>, 
-                    швейцарски франк (CHF) - <a className="badge badge-success" style="color: white !important;">{this.state.chf.toFixed(4)} лв.</a>, 
-                    шведска крона (SEK) - <a className="badge badge-success" style="color: white !important;">{this.state.sek.toFixed(4)} лв.</a>,
-                    датска крона (DKK) - <a className="badge badge-success" style="color: white !important;">{this.state.dkk.toFixed(4)} лв.</a>, 
-                    норвежка крона (NOK) - <a className="badge badge-success" style="color: white !important;">{this.state.nok.toFixed(4)} лв.</a>, 
-                    руска рубла (RUB) - <a className="badge badge-success" style="color: white !important;">{this.state.rub.toFixed(4)} лв.</a>, 
-                    полска злота (PLN) - <a className="badge badge-success" style="color: white !important;">{this.state.pln.toFixed(4)} лв.</a>, 
-                    унгарски форинт (HUF) - <a className="badge badge-success" style="color: white !important;">{this.state.huf.toFixed(4)} лв.</a>, 
-                    японска йена (JPY) - <a className="badge badge-success" style="color: white !important;">{this.state.jpy.toFixed(4)} лв.</a>, 
-                    австралийски долар (AUD) - <a className="badge badge-success" style="color: white !important;">{this.state.aud.toFixed(4)} лв.</a>, 
-                    канадски долар (CAD) - <a className="badge badge-success" style="color: white !important;">{this.state.cad.toFixed(4)} лв.</a>
+                    евро (EUR) - <a className="badge badge-success" style={{color: 'white'}}>{this.state.eur.toFixed(4)} лв.</a>, 
+                    щатски долар (USD) - <a className="badge badge-success" style={{color: 'white'}}>{this.state.usd.toFixed(4)} лв.</a>, 
+                    британска лира (GBP) - <a className="badge badge-success" style={{color: 'white'}}>{this.state.gbp.toFixed(4)} лв.</a>, 
+                    нова румънска лея (RON) - <a className="badge badge-success" style={{color: 'white'}}>{this.state.ron.toFixed(4)} лв.</a>, 
+                    нова турска лира (TRY) - <a className="badge badge-success" style={{color: 'white'}}>{this.state.try.toFixed(4)} лв.</a>, 
+                    швейцарски франк (CHF) - <a className="badge badge-success" style={{color: 'white'}}>{this.state.chf.toFixed(4)} лв.</a>, 
+                    шведска крона (SEK) - <a className="badge badge-success" style={{color: 'white'}}>{this.state.sek.toFixed(4)} лв.</a>,
+                    датска крона (DKK) - <a className="badge badge-success" style={{color: 'white'}}>{this.state.dkk.toFixed(4)} лв.</a>, 
+                    норвежка крона (NOK) - <a className="badge badge-success" style={{color: 'white'}}>{this.state.nok.toFixed(4)} лв.</a>, 
+                    руска рубла (RUB) - <a className="badge badge-success" style={{color: 'white'}}>{this.state.rub.toFixed(4)} лв.</a>, 
+                    полска злота (PLN) - <a className="badge badge-success" style={{color: 'white'}}>{this.state.pln.toFixed(4)} лв.</a>, 
+                    унгарски форинт (HUF) - <a className="badge badge-success" style={{color: 'white'}}>{this.state.huf.toFixed(4)} лв.</a>, 
+                    японска йена (JPY) - <a className="badge badge-success" style={{color: 'white'}}>{this.state.jpy.toFixed(4)} лв.</a>, 
+                    австралийски долар (AUD) - <a className="badge badge-success" style={{color: 'white'}}>{this.state.aud.toFixed(4)} лв.</a>, 
+                    канадски долар (CAD) - <a className="badge badge-success" style={{color: 'white'}}>{this.state.cad.toFixed(4)} лв.</a>
                     <br />
                     <br />
-                    <div class="input-group">
+                    <div className="input-group">
                         <input
                             type="number"
                             name="value"
@@ -260,7 +260,7 @@ class App extends React.Component {
                     </div>
                     <br />
                     <center>
-                        <div class="btn-group" role="group" aria-label="">
+                        <div className="btn-group" role="group" aria-label="">
                             <button
                                 onClick={this.handleConvert}
                                 className="btn btn-primary">
