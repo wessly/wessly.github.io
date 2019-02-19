@@ -30,187 +30,33 @@ var App = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 
         _this.state = {
-            bgn: 1,
-            eur: 1.95,
-            usd: 0,
-            gbp: 0,
-            ron: 0,
-            try: 0,
-            chf: 0,
-            sek: 0,
-            dkk: 0,
-            nok: 0,
-            rub: 0,
-            pln: 0,
-            huf: 0,
-            jpy: 0,
-            aud: 0,
-            cad: 0,
             value: 0,
             final: 0,
-            from: '',
-            to: ''
+            finalIncome: 0,
+            from: 'BGN',
+            to: 'BGN'
         };
 
-        _this.handleConvert = _this.handleConvert.bind(_this);
         _this.handleChangeInput = _this.handleChangeInput.bind(_this);
         return _this;
     }
 
     _createClass(App, [{
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            var _this2 = this;
-
-            fetch('https://30nalowl00.execute-api.us-east-1.amazonaws.com/dev/currencies/all', {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            }).then(function (response) {
-                return response.json();
-            }).then(function (jsondata) {
-
-                _this2.setState({
-                    usd: Number(jsondata[0][29]["Лева (BGN)"]),
-                    gbp: Number(jsondata[0][7]["Лева (BGN)"]),
-                    ron: Number(jsondata[0][23]["Лева (BGN)"]),
-                    try: Number(jsondata[0][28]["Лева (BGN)"]),
-                    chf: Number(jsondata[0][3]["Лева (BGN)"]),
-                    sek: Number(jsondata[0][25]["Лева (BGN)"]),
-                    dkk: Number(jsondata[0][6]["Лева (BGN)"]),
-                    nok: Number(jsondata[0][19]["Лева (BGN)"]),
-                    rub: Number(jsondata[0][24]["Лева (BGN)"]),
-                    pln: Number(jsondata[0][22]["Лева (BGN)"]),
-                    huf: Number(jsondata[0][10]["Лева (BGN)"]),
-                    jpy: Number(jsondata[0][15]["Лева (BGN)"]),
-                    aud: Number(jsondata[0][0]["Лева (BGN)"]),
-                    cad: Number(jsondata[0][2]["Лева (BGN)"])
-                });
-            });
-        }
-    }, {
         key: 'handleChangeInput',
         value: function handleChangeInput(e) {
-            this.setState(_defineProperty({}, e.target.name, e.target.value));
-        }
-    }, {
-        key: 'handleConvert',
-        value: function handleConvert() {
+            var _this2 = this;
 
-            var c1 = void 0,
-                c2 = void 0;
-
-            switch (this.state.from) {
-                case 'bgn':
-                    c1 = 1;
-                    break;
-                case 'eur':
-                    c1 = 1.95;
-                    break;
-                case 'usd':
-                    c1 = this.state.usd;
-                    break;
-                case 'gbp':
-                    c1 = this.state.gbp;
-                    break;
-                case 'ron':
-                    c1 = this.state.ron;
-                    break;
-                case 'try':
-                    c1 = this.state.try;
-                    break;
-                case 'chf':
-                    c1 = this.state.chf;
-                    break;
-                case 'sek':
-                    c1 = this.state.sek;
-                    break;
-                case 'dkk':
-                    c1 = this.state.dkk;
-                    break;
-                case 'nok':
-                    c1 = this.state.nok;
-                    break;
-                case 'rub':
-                    c1 = this.state.rub;
-                    break;
-                case 'pln':
-                    c1 = this.state.pln;
-                    break;
-                case 'huf':
-                    c1 = this.state.huf;
-                    break;
-                case 'jpy':
-                    c1 = this.state.jpy;
-                    break;
-                case 'aud':
-                    c1 = this.state.aud;
-                    break;
-                case 'cad':
-                    c1 = this.state.cad;
-                    break;
-                default:
-                    c1 = 1;
-                    break;
-            }
-
-            switch (this.state.to) {
-                case 'bgn':
-                    c2 = 1;
-                    break;
-                case 'eur':
-                    c2 = 1.95;
-                    break;
-                case 'usd':
-                    c2 = this.state.usd;
-                    break;
-                case 'gbp':
-                    c2 = this.state.gbp;
-                    break;
-                case 'ron':
-                    c2 = this.state.ron;
-                    break;
-                case 'try':
-                    c2 = this.state.try;
-                    break;
-                case 'chf':
-                    c2 = this.state.chf;
-                    break;
-                case 'sek':
-                    c2 = this.state.sek;
-                    break;
-                case 'dkk':
-                    c2 = this.state.dkk;
-                    break;
-                case 'nok':
-                    c2 = this.state.nok;
-                    break;
-                case 'rub':
-                    c2 = this.state.rub;
-                    break;
-                case 'pln':
-                    c2 = this.state.pln;
-                    break;
-                case 'huf':
-                    c2 = this.state.huf;
-                    break;
-                case 'jpy':
-                    c2 = this.state.jpy;
-                    break;
-                case 'aud':
-                    c2 = this.state.aud;
-                    break;
-                case 'cad':
-                    c2 = this.state.cad;
-                    break;
-                default:
-                    c2 = 1;
-                    break;
-            }
-
-            this.setState({
-                final: Number(this.state.value * (c1 / c2))
+            this.setState(_defineProperty({}, e.target.name, e.target.value), function () {
+                fetch('https://api.exchangeratesapi.io/latest?base=' + _this2.state.from + '&symbols=' + _this2.state.to).then(function (response) {
+                    return response.json();
+                }).then(function (data) {
+                    var final = Number(data.rates[_this2.state.to] * _this2.state.value).toFixed(4);
+                    var finalIncome = Number(_this2.state.value * 2 / 100).toFixed(4);
+                    _this2.setState({
+                        final: Number(final),
+                        finalIncome: Number(final) + Number(finalIncome)
+                    });
+                });
             });
         }
     }, {
@@ -219,117 +65,10 @@ var App = function (_React$Component) {
             return _react2.default.createElement(
                 'div',
                 { className: 'container' },
+                _react2.default.createElement('br', null),
                 _react2.default.createElement(
                     'div',
                     { className: 'form-group' },
-                    _react2.default.createElement('br', null),
-                    '\u0435\u0432\u0440\u043E (EUR) - ',
-                    _react2.default.createElement(
-                        'a',
-                        { className: 'badge badge-success', style: { color: 'white' } },
-                        this.state.eur,
-                        ' \u043B\u0432.'
-                    ),
-                    ', \u0449\u0430\u0442\u0441\u043A\u0438 \u0434\u043E\u043B\u0430\u0440 (USD) - ',
-                    _react2.default.createElement(
-                        'a',
-                        { className: 'badge badge-success', style: { color: 'white' } },
-                        this.state.usd,
-                        ' \u043B\u0432.'
-                    ),
-                    ', \u0431\u0440\u0438\u0442\u0430\u043D\u0441\u043A\u0430 \u043B\u0438\u0440\u0430 (GBP) - ',
-                    _react2.default.createElement(
-                        'a',
-                        { className: 'badge badge-success', style: { color: 'white' } },
-                        this.state.gbp,
-                        ' \u043B\u0432.'
-                    ),
-                    ', \u043D\u043E\u0432\u0430 \u0440\u0443\u043C\u044A\u043D\u0441\u043A\u0430 \u043B\u0435\u044F (RON) - ',
-                    _react2.default.createElement(
-                        'a',
-                        { className: 'badge badge-success', style: { color: 'white' } },
-                        this.state.ron,
-                        ' \u043B\u0432.'
-                    ),
-                    ', \u043D\u043E\u0432\u0430 \u0442\u0443\u0440\u0441\u043A\u0430 \u043B\u0438\u0440\u0430 (TRY) - ',
-                    _react2.default.createElement(
-                        'a',
-                        { className: 'badge badge-success', style: { color: 'white' } },
-                        this.state.try,
-                        ' \u043B\u0432.'
-                    ),
-                    ', \u0448\u0432\u0435\u0439\u0446\u0430\u0440\u0441\u043A\u0438 \u0444\u0440\u0430\u043D\u043A (CHF) - ',
-                    _react2.default.createElement(
-                        'a',
-                        { className: 'badge badge-success', style: { color: 'white' } },
-                        this.state.chf,
-                        ' \u043B\u0432.'
-                    ),
-                    ', \u0448\u0432\u0435\u0434\u0441\u043A\u0430 \u043A\u0440\u043E\u043D\u0430 (SEK) - ',
-                    _react2.default.createElement(
-                        'a',
-                        { className: 'badge badge-success', style: { color: 'white' } },
-                        this.state.sek,
-                        ' \u043B\u0432.'
-                    ),
-                    ', \u0434\u0430\u0442\u0441\u043A\u0430 \u043A\u0440\u043E\u043D\u0430 (DKK) - ',
-                    _react2.default.createElement(
-                        'a',
-                        { className: 'badge badge-success', style: { color: 'white' } },
-                        this.state.dkk,
-                        ' \u043B\u0432.'
-                    ),
-                    ', \u043D\u043E\u0440\u0432\u0435\u0436\u043A\u0430 \u043A\u0440\u043E\u043D\u0430 (NOK) - ',
-                    _react2.default.createElement(
-                        'a',
-                        { className: 'badge badge-success', style: { color: 'white' } },
-                        this.state.nok,
-                        ' \u043B\u0432.'
-                    ),
-                    ', \u0440\u0443\u0441\u043A\u0430 \u0440\u0443\u0431\u043B\u0430 (RUB) - ',
-                    _react2.default.createElement(
-                        'a',
-                        { className: 'badge badge-success', style: { color: 'white' } },
-                        this.state.rub,
-                        ' \u043B\u0432.'
-                    ),
-                    ', \u043F\u043E\u043B\u0441\u043A\u0430 \u0437\u043B\u043E\u0442\u0430 (PLN) - ',
-                    _react2.default.createElement(
-                        'a',
-                        { className: 'badge badge-success', style: { color: 'white' } },
-                        this.state.pln,
-                        ' \u043B\u0432.'
-                    ),
-                    ', \u0443\u043D\u0433\u0430\u0440\u0441\u043A\u0438 \u0444\u043E\u0440\u0438\u043D\u0442 (HUF) - ',
-                    _react2.default.createElement(
-                        'a',
-                        { className: 'badge badge-success', style: { color: 'white' } },
-                        this.state.huf,
-                        ' \u043B\u0432.'
-                    ),
-                    ', \u044F\u043F\u043E\u043D\u0441\u043A\u0430 \u0439\u0435\u043D\u0430 (JPY) - ',
-                    _react2.default.createElement(
-                        'a',
-                        { className: 'badge badge-success', style: { color: 'white' } },
-                        this.state.jpy,
-                        ' \u043B\u0432.'
-                    ),
-                    ', \u0430\u0432\u0441\u0442\u0440\u0430\u043B\u0438\u0439\u0441\u043A\u0438 \u0434\u043E\u043B\u0430\u0440 (AUD) - ',
-                    _react2.default.createElement(
-                        'a',
-                        { className: 'badge badge-success', style: { color: 'white' } },
-                        this.state.aud,
-                        ' \u043B\u0432.'
-                    ),
-                    ', \u043A\u0430\u043D\u0430\u0434\u0441\u043A\u0438 \u0434\u043E\u043B\u0430\u0440 (CAD) - ',
-                    _react2.default.createElement(
-                        'a',
-                        { className: 'badge badge-success', style: { color: 'white' } },
-                        this.state.cad,
-                        ' \u043B\u0432.'
-                    ),
-                    _react2.default.createElement('br', null),
-                    _react2.default.createElement('br', null),
                     _react2.default.createElement(
                         'div',
                         { className: 'input-group' },
@@ -346,82 +85,82 @@ var App = function (_React$Component) {
                                 className: 'form-control' },
                             _react2.default.createElement(
                                 'option',
-                                { value: 'bgn' },
+                                { value: 'BGN' },
                                 'BGN'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'eur' },
+                                { value: 'EUR' },
                                 'EUR'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'usd' },
+                                { value: 'USD' },
                                 'USD'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'gbp' },
+                                { value: 'GBP' },
                                 'GBP'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'ron' },
+                                { value: 'RON' },
                                 'RON'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'try' },
+                                { value: 'TRY' },
                                 'TRY'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'chf' },
+                                { value: 'CHF' },
                                 'CHF'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'sek' },
+                                { value: 'SEK' },
                                 'SEK'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'dkk' },
+                                { value: 'DKK' },
                                 'DKK'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'nok' },
+                                { value: 'NOK' },
                                 'NOK'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'rub' },
+                                { value: 'RUB' },
                                 'RUB'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'pln' },
+                                { value: 'PLN' },
                                 'PLN'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'huf' },
+                                { value: 'HUF' },
                                 'HUF'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'jpy' },
+                                { value: 'JPY' },
                                 'JPY'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'aud' },
+                                { value: 'AUD' },
                                 'AUD'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'cad' },
+                                { value: 'CAD' },
                                 'CAD'
                             )
                         ),
@@ -433,82 +172,82 @@ var App = function (_React$Component) {
                                 className: 'form-control' },
                             _react2.default.createElement(
                                 'option',
-                                { value: 'bgn' },
+                                { value: 'BGN' },
                                 'BGN'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'eur' },
+                                { value: 'EUR' },
                                 'EUR'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'usd' },
+                                { value: 'USD' },
                                 'USD'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'gbp' },
+                                { value: 'GBP' },
                                 'GBP'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'ron' },
+                                { value: 'RON' },
                                 'RON'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'try' },
+                                { value: 'TRY' },
                                 'TRY'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'chf' },
+                                { value: 'CHF' },
                                 'CHF'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'sek' },
+                                { value: 'SEK' },
                                 'SEK'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'dkk' },
+                                { value: 'DKK' },
                                 'DKK'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'nok' },
+                                { value: 'NOK' },
                                 'NOK'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'rub' },
+                                { value: 'RUB' },
                                 'RUB'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'pln' },
+                                { value: 'PLN' },
                                 'PLN'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'huf' },
+                                { value: 'HUF' },
                                 'HUF'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'jpy' },
+                                { value: 'JPY' },
                                 'JPY'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'aud' },
+                                { value: 'AUD' },
                                 'AUD'
                             ),
                             _react2.default.createElement(
                                 'option',
-                                { value: 'cad' },
+                                { value: 'CAD' },
                                 'CAD'
                             )
                         )
@@ -518,21 +257,22 @@ var App = function (_React$Component) {
                         'center',
                         null,
                         _react2.default.createElement(
-                            'div',
-                            { className: 'btn-group', role: 'group', 'aria-label': '' },
-                            _react2.default.createElement(
-                                'button',
-                                {
-                                    onClick: this.handleConvert,
-                                    className: 'btn btn-primary' },
-                                '\u0418\u0437\u0447\u0438\u0441\u043B\u0438'
-                            ),
-                            _react2.default.createElement(
-                                'button',
-                                {
-                                    className: 'btn btn-info' },
-                                this.state.final
-                            )
+                            'button',
+                            {
+                                className: 'btn btn-success' },
+                            this.state.final,
+                            ' ',
+                            this.state.to
+                        ),
+                        _react2.default.createElement('br', null),
+                        _react2.default.createElement(
+                            'button',
+                            {
+                                className: 'btn btn-danger' },
+                            this.state.finalIncome,
+                            ' ',
+                            this.state.to,
+                            ' + 2%'
                         )
                     )
                 )
