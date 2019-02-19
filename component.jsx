@@ -9,9 +9,8 @@ class App extends React.Component {
         this.state = {
             value: 0,
             final: 0,
-            finalIncome: 0,
-            from: 'BGN',
-            to: 'BGN'
+            from: '',
+            to: ''
         }
 
         this.handleChangeInput = this.handleChangeInput.bind(this)
@@ -24,11 +23,8 @@ class App extends React.Component {
             fetch('https://api.exchangeratesapi.io/latest?base='+this.state.from+'&symbols='+this.state.to)
             .then(response => response.json())
             .then(data => {
-                let final = Number(data.rates[this.state.to] * this.state.value).toFixed(4)
-                let finalIncome = Number((this.state.value*2)/100).toFixed(4)
                 this.setState({
-                    final: Number(final),
-                    finalIncome: Number(final) + Number(finalIncome)
+                    final: Number(data.rates[this.state.to] * this.state.value).toFixed(4)
                 })
             })
         })
@@ -44,11 +40,13 @@ class App extends React.Component {
                             type="number"
                             name="value"
                             onChange={this.handleChangeInput}
+                            placeholder="0"
                             className="form-control" />
                         <select
                             name="from"
                             onChange={this.handleChangeInput}
                             className="form-control">
+                            <option value="">от</option>
                             <option value="BGN">BGN</option>
                             <option value="EUR">EUR</option>
                             <option value="USD">USD</option>
@@ -70,6 +68,7 @@ class App extends React.Component {
                             name="to"
                             onChange={this.handleChangeInput}
                             className="form-control">
+                            <option value="">към</option>
                             <option value="BGN">BGN</option>
                             <option value="EUR">EUR</option>
                             <option value="USD">USD</option>
@@ -92,12 +91,7 @@ class App extends React.Component {
                     <center>
                         <button
                             className="btn btn-success">
-                            {this.state.final} {this.state.to}
-                        </button>
-                        <br />
-                        <button
-                            className="btn btn-danger">
-                            {this.state.finalIncome} {this.state.to} + 2%
+                            {!isNaN(this.state.final)? this.state.final +" "+ this.state.to : 0}
                         </button>
                     </center>
                 </div>

@@ -32,9 +32,8 @@ var App = function (_React$Component) {
         _this.state = {
             value: 0,
             final: 0,
-            finalIncome: 0,
-            from: 'BGN',
-            to: 'BGN'
+            from: '',
+            to: ''
         };
 
         _this.handleChangeInput = _this.handleChangeInput.bind(_this);
@@ -50,11 +49,8 @@ var App = function (_React$Component) {
                 fetch('https://api.exchangeratesapi.io/latest?base=' + _this2.state.from + '&symbols=' + _this2.state.to).then(function (response) {
                     return response.json();
                 }).then(function (data) {
-                    var final = Number(data.rates[_this2.state.to] * _this2.state.value).toFixed(4);
-                    var finalIncome = Number(_this2.state.value * 2 / 100).toFixed(4);
                     _this2.setState({
-                        final: Number(final),
-                        finalIncome: Number(final) + Number(finalIncome)
+                        final: Number(data.rates[_this2.state.to] * _this2.state.value).toFixed(4)
                     });
                 });
             });
@@ -76,6 +72,7 @@ var App = function (_React$Component) {
                             type: 'number',
                             name: 'value',
                             onChange: this.handleChangeInput,
+                            placeholder: '0',
                             className: 'form-control' }),
                         _react2.default.createElement(
                             'select',
@@ -83,6 +80,11 @@ var App = function (_React$Component) {
                                 name: 'from',
                                 onChange: this.handleChangeInput,
                                 className: 'form-control' },
+                            _react2.default.createElement(
+                                'option',
+                                { value: '' },
+                                '\u043E\u0442'
+                            ),
                             _react2.default.createElement(
                                 'option',
                                 { value: 'BGN' },
@@ -170,6 +172,11 @@ var App = function (_React$Component) {
                                 name: 'to',
                                 onChange: this.handleChangeInput,
                                 className: 'form-control' },
+                            _react2.default.createElement(
+                                'option',
+                                { value: '' },
+                                '\u043A\u044A\u043C'
+                            ),
                             _react2.default.createElement(
                                 'option',
                                 { value: 'BGN' },
@@ -260,19 +267,7 @@ var App = function (_React$Component) {
                             'button',
                             {
                                 className: 'btn btn-success' },
-                            this.state.final,
-                            ' ',
-                            this.state.to
-                        ),
-                        _react2.default.createElement('br', null),
-                        _react2.default.createElement(
-                            'button',
-                            {
-                                className: 'btn btn-danger' },
-                            this.state.finalIncome,
-                            ' ',
-                            this.state.to,
-                            ' + 2%'
+                            !isNaN(this.state.final) ? this.state.final + " " + this.state.to : 0
                         )
                     )
                 )
